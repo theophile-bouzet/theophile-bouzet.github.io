@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Your Name] – Engineering e-Portfolio</title>
+<meta name="description" content="E-portfolio of [Your Name], engineering student at [School].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F6F8;--ink:#0F1B2D;--muted:#5B6778;--line:#D5DBE3;--accent:#1F4BFF;--soft:#E6ECFF;--side:250px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.65 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:500;margin-bottom:.3em}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--ink);color:#fff;padding:2rem 1.5rem;display:flex;flex-direction:column;gap:2rem}
+.brand{font:700 1.25rem "Bricolage Grotesque",sans-serif;color:#fff;text-decoration:none}
+nav{display:flex;flex-direction:column;gap:.15rem}
+nav a{color:#B8C3D4;text-decoration:none;padding:.5rem .75rem;border-left:3px solid transparent;font-weight:500}
+nav a:hover{color:#fff}
+nav a[aria-current]{color:#fff;border-left-color:#7C9BFF;background:rgba(255,255,255,.07)}
+main{margin-left:var(--side);padding:4rem clamp(1.25rem,5vw,4.5rem) 5rem;max-width:calc(var(--side) + 62rem)}
+.page[hidden],[role=tabpanel][hidden]{display:none}
+.lead{font-size:1.25rem;color:var(--muted);max-width:40rem}
+.tabs{display:flex;gap:.25rem;border-bottom:2px solid var(--line);margin:2rem 0 2rem;flex-wrap:wrap}
+.tabs a{padding:.6rem 1.1rem;text-decoration:none;color:var(--muted);font-weight:600;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tabs a[aria-selected=true]{color:var(--accent);border-bottom-color:var(--accent)}
+.hero{display:grid;grid-template-columns:1fr 220px;gap:2.5rem;align-items:center;margin-bottom:2.5rem}
+.photo{width:220px;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:var(--soft);border:1px solid var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.5rem 0}
+.btn{display:inline-block;padding:.65rem 1.2rem;border-radius:4px;font-weight:600;text-decoration:none;border:2px solid var(--accent);color:var(--accent)}
+.btn.main{background:var(--accent);color:#fff}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.video{aspect-ratio:16/9;width:100%;max-width:44rem;border:0;border-radius:6px;background:var(--ink);display:block}
+.item{padding:1.5rem 0;border-top:1px solid var(--line);max-width:44rem}
+.item:first-of-type{border-top:0;padding-top:0}
+.meta{color:var(--muted);font-size:.95rem;margin:0 0 .6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:.8rem 0 0;list-style:none}
+.tags li{background:var(--soft);color:#1A2F99;font-size:.85rem;font-weight:500;padding:.15rem .6rem;border-radius:3px}
+p{margin:0 0 1em;max-width:44rem}
+ul.plain{padding-left:1.2rem;max-width:44rem}
+footer{margin-top:4rem;color:var(--muted);font-size:.9rem}
+@media (max-width:820px){
+ .side{position:static;width:auto;flex-direction:row;align-items:center;padding:.75rem 1rem;gap:1rem;overflow-x:auto}
+ .brand{white-space:nowrap}
+ nav{flex-direction:row}
+ nav a{white-space:nowrap;border-left:0;border-bottom:3px solid transparent;padding:.4rem .6rem}
+ nav a[aria-current]{border-bottom-color:#7C9BFF;background:none}
+ main{margin-left:0;padding-top:2rem}
+ .hero{grid-template-columns:1fr}
+ .photo{order:-1;width:150px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="side">
+  <a class="brand" href="#welcome">[Your Name]</a>
+  <nav aria-label="Main">
+    <a href="#welcome">Welcome</a>
+    <a href="#engineering">Engineering course</a>
+    <a href="#mobility">International mobility</a>
+    <a href="#sustainability">Sustainability &amp; civic engagement</a>
+    <a href="#sport">Sport &amp; other activities</a>
+    <a href="#career">Career development</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ WELCOME ============ -->
+<section class="page" id="welcome">
+  <div class="hero">
+    <div>
+      <h1>[Your Name]</h1>
+      <p class="lead">Engineering student at [School], specialising in [your field]. I am looking for [internship / semester abroad / first job] in [domain].</p>
+    </div>
+    <img class="photo" src="photo.PNG" alt="Portrait of [Your Name]">
+  </div>
+  <h2>My elevator pitch</h2>
+  <!-- Option A: video hosted on YouTube (unlisted). Replace VIDEO_ID. -->
+  <iframe class="video" src="https://www.youtube.com/embed/VIDEO_ID" title="Elevator pitch of [Your Name]" allowfullscreen loading="lazy"></iframe>
+  <!-- Option B: video file in the repo. Delete Option A and use:
+  <video class="video" controls preload="metadata" src="assets/elevator-pitch.mp4"></video> -->
+  <div class="btns">
+    <a class="btn main" href="CV_EN.pdf" target="_blank" rel="noopener">Download my CV (English)</a>
+    <a class="btn main" href="CV_FR.pdf" target="_blank" rel="noopener">Télécharger mon CV (français)</a>
+    <a class="btn" href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p>Use this page to introduce yourself in 4 to 5 lines: who you are, what drives you, and what this portfolio shows.</p>
+</section>
+
+<!-- ============ ENGINEERING ============ -->
+<section class="page" id="engineering" hidden>
+  <h2>Engineering course</h2>
+  <p class="lead">My curriculum, the projects I carried out and what I produced.</p>
+  <div class="tabs" role="tablist">
+    <a role="tab" href="#engineering/projects" data-tab="projects">Projects</a>
+    <a role="tab" href="#engineering/productions" data-tab="productions">Productions</a>
+  </div>
+  <div role="tabpanel" data-panel="projects">
+    <article class="item">
+      <h3>[Project title]</h3>
+      <p class="meta">[Year] · [Team of N / individual] · [Your role]</p>
+      <p>Context, objective, what you did, result. Mention what you learned and what you would improve.</p>
+      <p><a href="https://github.com/your-name/your-project">View on GitHub</a></p>
+      <ul class="tags"><li>Python</li><li>Teamwork</li></ul>
+    </article>
+    <article class="item">
+      <h3>[Project title]</h3>
+      <p class="meta">[Year] · [Team of N / individual] · [Your role]</p>
+      <p>Same structure as above.</p>
+      <ul class="tags"><li>[Tool]</li><li>[Skill]</li></ul>
+    </article>
+  </div>
+  <div role="tabpanel" data-panel="productions" hidden>
+    <article class="item">
+      <h3>[Production: report, poster, prototype, presentation…]</h3>
+      <p class="meta">[Course or context] · [Date]</p>
+      <p>Short description of the deliverable and why it matters. Link a PDF placed in <code>assets/</code>.</p>
+      <p><a href="assets/production-1.pdf">Open the document</a></p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ MOBILITY ============ -->
+<section class="page" id="mobility" hidden>
+  <h2>International mobility</h2>
+  <p class="lead">Languages, experiences abroad and international projects.</p>
+  <div class="tabs" role="tablist">
+    <a role="tab" href="#mobility/pce" data-tab="pce">PCE</a>
+    <a role="tab" href="#mobility/lv2" data-tab="lv2">LV2</a>
+    <a role="tab" href="#mobility/other" data-tab="other">Other</a>
+  </div>
+  <div role="tabpanel" data-panel="pce">
+    <p><strong>Destination:</strong> [Country, host institution or company] · <strong>Dates:</strong> [from – to]</p>
+    <p>What you did, what surprised you, what you learned about yourself and about working in another culture.</p>
+  </div>
+  <div role="tabpanel" data-panel="lv2" hidden>
+    <p><strong>Language:</strong> [German / Spanish / …] · <strong>Level:</strong> [B1 / B2…]</p>
+    <p>Your course, certifications, immersion experiences and how you use this language.</p>
+  </div>
+  <div role="tabpanel" data-panel="other" hidden>
+    <p>English level and certifications (TOEIC, TOEFL, IELTS…), exchanges, international events, travel with a learning value.</p>
+  </div>
+</section>
+
+<!-- ============ SUSTAINABILITY ============ -->
+<section class="page" id="sustainability" hidden>
+  <h2>Sustainability &amp; civic engagement</h2>
+  <p class="lead">What I do for the planet and for others.</p>
+  <article class="item">
+    <h3>[Activity: association, workshop, volunteering…]</h3>
+    <p class="meta">[Dates] · [Your role]</p>
+    <p>What you did, who benefited, what you learned and how it connects to your future work as an engineer.</p>
+  </article>
+  <article class="item">
+    <h3>[Another activity]</h3>
+    <p class="meta">[Dates] · [Your role]</p>
+    <p>Same structure as above.</p>
+  </article>
+</section>
+
+<!-- ============ SPORT ============ -->
+<section class="page" id="sport" hidden>
+  <h2>Sport &amp; other activities</h2>
+  <p class="lead">What I do outside of class, and what it teaches me.</p>
+  <article class="item">
+    <h3>[Sport or activity]</h3>
+    <p class="meta">[Level, club, number of years]</p>
+    <p>Link the activity to skills: team spirit, discipline, leadership, resilience.</p>
+  </article>
+  <article class="item">
+    <h3>[Music, art, travel, associations…]</h3>
+    <p class="meta">[Details]</p>
+    <p>Same structure as above.</p>
+  </article>
+</section>
+
+<!-- ============ CAREER ============ -->
+<section class="page" id="career" hidden>
+  <h2>Career development</h2>
+  <p class="lead">My documents, my experiences and my professional plan.</p>
+  <div class="tabs" role="tablist">
+    <a role="tab" href="#career/documents" data-tab="documents">CV &amp; LinkedIn</a>
+    <a role="tab" href="#career/internships" data-tab="internships">Internships</a>
+    <a role="tab" href="#career/pep" data-tab="pep">PEP</a>
+  </div>
+  <div role="tabpanel" data-panel="documents">
+    <div class="btns">
+      <a class="btn main" href="CV_EN.pdf" target="_blank" rel="noopener">CV (English)</a>
+      <a class="btn main" href="CV_FR.pdf" target="_blank" rel="noopener">CV (français)</a>
+      <a class="btn" href="https://www.linkedin.com/in/your-profile/" target="_blank" rel="noopener">LinkedIn profile</a>
+    </div>
+  </div>
+  <div role="tabpanel" data-panel="internships" hidden>
+    <article class="item">
+      <h3>[Internship title]</h3>
+      <p class="meta">[Company, city] · [Dates]</p>
+      <p>Missions, tools, results, and what you learned about the company and the engineer’s role.</p>
+    </article>
+  </div>
+  <div role="tabpanel" data-panel="pep" hidden>
+    <p>Your Personal and Professional Project: the job or sector you aim for, why, your strengths, what you still need to develop, and the steps planned to get there.</p>
+  </div>
+</section>
+
+<footer>© 2026 [Your Name] · [your.email@example.com]</footer>
+</main>
+
+<script>
+(function(){
+  var pages=document.querySelectorAll('.page'),links=document.querySelectorAll('nav a');
+  function route(){
+    var parts=(location.hash.slice(1)||'welcome').split('/');
+    var page=document.getElementById(parts[0])||document.getElementById('welcome');
+    pages.forEach(function(s){s.hidden=(s!==page)});
+    links.forEach(function(a){
+      if(a.getAttribute('href')==='#'+page.id){a.setAttribute('aria-current','page')}else{a.removeAttribute('aria-current')}
+    });
+    var tabs=page.querySelectorAll('[role=tab]');
+    if(tabs.length){
+      var current=parts[1]||tabs[0].dataset.tab;
+      tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.tab===current)});
+      page.querySelectorAll('[role=tabpanel]').forEach(function(p){p.hidden=(p.dataset.panel!==current)});
+    }
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);
+  route();
+})();
+</script>
+</body>
+</html>
